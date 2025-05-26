@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js" 
+}
+
+datasource db {
+  provider = "postgresql" 
+  url      = env("DATABASE_URL") 
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  password      String?   
+  todos         Todo[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Todo {
+  id                    String    @id @default(cuid())
+  title                 String
+  description           String?
+  createdAt             DateTime  @default(now()) @map("created_at")
+  expectedCompletionDate DateTime? @map("expected_completion_date") 
+  completed             Boolean   @default(false)
+  completedAt           DateTime? @map("completed_at")              
+  priority              Int       @default(0)                       
+  isArchived            Boolean   @default(false)                   
+  userId                String    @map("user_id")
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("todos")
+}
