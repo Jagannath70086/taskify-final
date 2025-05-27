@@ -16,7 +16,7 @@ export async function PUT(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     const body = await request.json();
 
     const existingTodo = await prisma.todo.findFirst({
@@ -67,7 +67,7 @@ export async function DELETE(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
 
     const existingTodo = await prisma.todo.findFirst({
       where: {
