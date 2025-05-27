@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${lexend.className} antialiased`}>
         {children}
-        <Toaster />
+        <Toaster position="top-right" />
       </body>
     </html>
   );

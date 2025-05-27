@@ -11,6 +11,7 @@ import {
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
 import { FaGithub, FaGoogle, FaApple } from "react-icons/fa";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -47,6 +48,13 @@ export default function LoginPage() {
     if (res?.error) {
       setErrors({ general: 'Invalid credentials' });
     } else {
+      toast.success("Successfully signed in!", {
+        duration: 3000,
+        style: {
+          background: "rgba(0, 0, 0, 0.8)",
+          color: "#fff",
+        },
+      });
       router.push("/dashboard");
     }
   };
@@ -200,7 +208,7 @@ export default function LoginPage() {
               <button
                 key={provider.name}
                 onClick={provider.action}
-                className={`w-full flex items-center justify-center py-2.5 px-4 rounded-lg ${provider.color} ${provider.hoverColor} ${provider.textColor} text-sm font-medium border ${provider.borderColor} transition-colors shadow-sm`}
+                className={`w-full flex items-center cursor-not-allowed justify-center py-2.5 px-4 rounded-lg ${provider.color} ${provider.hoverColor} ${provider.textColor} text-sm font-medium border ${provider.borderColor} transition-colors shadow-sm`}
               >
                 {provider.icon}
                 {provider.name}

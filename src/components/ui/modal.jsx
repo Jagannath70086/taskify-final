@@ -26,7 +26,7 @@ export default function Modal({ children, show, onClose }) {
       onClick={onClose}
     >
       <div
-        className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 w-full max-w-md border border-white/20"
+        className="backdrop-blur-xl bg-white/10 rounded-2xl w-full max-w-sm border border-white/20"
         onClick={(e) => e.stopPropagation()}
       >
         {children}
