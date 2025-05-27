@@ -4,7 +4,7 @@
 
 Taskify is a modern, intuitive task management application built with Next.js that helps you organize your workflow, track progress, and achieve your goals with a beautiful, responsive interface.
 
-![Taskify Hero](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Taskify+Dashboard)
+![Taskify Hero](/.github/images/hero.png)
 
 ## ✨ Features
 
@@ -19,10 +19,10 @@ Taskify is a modern, intuitive task management application built with Next.js th
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Authentication:** [NextAuth.js](https://next-auth.js.org/)
-- **Database:** [Your Database Choice]
+- **Database:** [Supabase](https://supabase.com)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Deployment:** [Vercel](https://vercel.com/)
 
@@ -189,14 +189,6 @@ npm run test:coverage
 - `npm run lint:fix` - Fix ESLint issues
 - `npm run format` - Format code with Prettier
 
-### Code Style
-
-This project uses:
-- **ESLint** for code linting
-- **Prettier** for code formatting
-- **Husky** for git hooks
-- **Conventional Commits** for commit messages
-
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
@@ -206,12 +198,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## 🐛 Issues & Support
-
-- **Bug Reports:** [Create an issue](https://github.com/yourusername/taskify/issues)
-- **Feature Requests:** [Create an issue](https://github.com/yourusername/taskify/issues)
-- **Questions:** [Discussions](https://github.com/yourusername/taskify/discussions)
 
 ## 📄 License
 
@@ -224,18 +210,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Lucide](https://lucide.dev/) for the beautiful icons
 - [Vercel](https://vercel.com/) for seamless deployment
 
-## 📊 Status
-
-![Build Status](https://img.shields.io/github/workflow/status/yourusername/taskify/CI)
-![License](https://img.shields.io/github/license/yourusername/taskify)
-![Version](https://img.shields.io/github/package-json/v/yourusername/taskify)
-![Stars](https://img.shields.io/github/stars/yourusername/taskify)
-
 ---
 
 <div align="center">
   <p>Made with ❤️ by <a href="https://github.com/jagannath70086">Jagannath</a></p>
   <p>
-    <a href="https://taskify-demo.vercel.app">Live Demo</a> • 
+    <a href="https://taskify-demo.vercel.app">Live Demo</a>
   </p>
 </div>
