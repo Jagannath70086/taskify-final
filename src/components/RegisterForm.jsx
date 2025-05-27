@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ChangeEvent, useEffect, useRef } from "react";
+import React, { ChangeEvent, use, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useFormState, useFormStatus } from "react-dom";
 import {
@@ -17,6 +17,7 @@ import { FaGithub, FaGoogle, FaApple } from "react-icons/fa";
 
 import { registerUser, socialLogin } from "@/actions/auth";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const initialFormState = {
   errors: {},
@@ -117,6 +118,8 @@ export default function SignupPage() {
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
 
+  const router = useRouter();
+
   const errors = state?.errors || {};
 
   const isFirstRender = useRef(true);
@@ -133,6 +136,9 @@ export default function SignupPage() {
       toast.success(state.message, {
         duration: 5000,
       });
+      setTimeout(() => {
+        router.push("/login");
+      }, 500);
     }
   }, [state.success, state.message]);
 

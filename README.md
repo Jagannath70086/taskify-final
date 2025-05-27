@@ -6,6 +6,9 @@ Taskify is a modern, intuitive task management application built with Next.js th
 
 ![Taskify Hero](/.github/images/hero.png)
 
+> 📌 The content below is AI-generated (Yeah full AI).  
+> To explore directly, [check out the live demo](https://taskify-final.vercel.app).
+
 ## ✨ Features
 
 - **🎯 Intuitive Task Management** - Create, edit, and organize tasks with ease
@@ -215,6 +218,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Made with ❤️ by <a href="https://github.com/jagannath70086">Jagannath</a></p>
   <p>
-    <a href="https://taskify-demo.vercel.app">Live Demo</a>
+    <a href="https://taskify-final.vercel.app">Live Demo</a>
   </p>
 </div>

@@ -11,7 +11,10 @@ const passwordRequirements = new RegExp(
 
 const userSchema = z
   .object({
-    name: z.string().min(1, "Name is required"),
+    name: z
+      .string()
+      .min(1, "Name is required")
+      .regex(/^[a-zA-Z\s]+$/, "Name must not contain special characters or numbers"),
     email: z.string().email("Invalid email address"),
     password: z
       .string()
